@@ -39,6 +39,153 @@ const TYPED_STRINGS = [
   'Cloud & DevOps Enthusiast',
 ];
 
+/* ==========================================================================
+   INTERNACIONALIZACIÓN — Diccionario ES / EN
+   ========================================================================== */
+
+const TRANSLATIONS = {
+  es: {
+    'nav.about':        'Sobre mí',
+    'nav.experience':   'Experiencia',
+    'nav.skills':       'Habilidades',
+    'nav.education':    'Educación',
+    'nav.contact':      'Contacto',
+    'nav.open':         'Abrir menú de navegación',
+    'nav.close':        'Cerrar menú de navegación',
+    'hero.greeting':    'Hola, soy',
+    'hero.description': 'Ingeniero en Informática con <strong>+5 años</strong> de experiencia construyendo aplicaciones móviles de alto rendimiento con Flutter y React Native, arquitecturas cloud escalables y formando a la próxima generación de desarrolladores.',
+    'hero.btn.contact':    'Contáctame',
+    'hero.btn.experience': 'Ver experiencia',
+    'about.label': 'Quién soy',
+    'about.title': 'Perfil <span>Profesional</span>',
+    'about.p1':    'Soy <strong>Ingeniero en Informática</strong> egresado con distinción de la Universidad Santo Tomás y actualmente me desempeño como <strong>Desarrollador Full Stack en Correos Chile</strong>, liderando el ciclo de vida de aplicaciones móviles críticas.',
+    'about.p2':    'Mi especialidad es el desarrollo mobile con <strong>Flutter (Dart)</strong> y <strong>React Native (TypeScript)</strong>, respaldado por una sólida base en arquitecturas cloud sobre <strong>HuaweiCloud y AWS</strong>, integración de pipelines CI/CD con Jenkins y contenedores Docker.',
+    'about.p3':    'Paralelamente ejerzo como <strong>Docente de Especialidad</strong> en IP-CFT Santo Tomás, impartiendo IoT, Python y Programación Web, lo que me mantiene en permanente actualización y me da habilidades únicas de comunicación técnica.',
+    'stat.years':     'Años de experiencia',
+    'stat.apps':      'Apps mobile publicadas',
+    'stat.companies': 'Empresas impactadas',
+    'stat.students':  'Estudiantes formados',
+    'exp.label':        'Trayectoria',
+    'exp.title':        'Experiencia <span>Laboral</span>',
+    'exp.correos.role': 'Desarrollador Full Stack & Mobile',
+    'exp.correos.date': 'Feb 2023 – Actualidad',
+    'exp.correos.desc': 'Responsable del ciclo de vida completo de aplicaciones móviles corporativas: análisis, desarrollo, testing y despliegue. Optimización de infraestructura cloud, implementación de pipelines CI/CD y coordinación de equipos multidisciplinarios para entregas ágiles.',
+    'exp.sst.role': 'Docente de Especialidad TI',
+    'exp.sst.date': '2024 – Actualidad',
+    'exp.sst.desc': 'Docente de cursos de especialidad: IoT con Arduino/Raspberry Pi, Programación en Python y Desarrollo Web Full Stack. Diseño de material didáctico, evaluaciones por competencias y mentoría personalizada a estudiantes.',
+    'exp.llego.date': 'Mayo 2022 – Ene 2023',
+    'exp.llego.desc': 'Diseño e implementación de microservicios y APIs REST en Python con arquitectura Serverless. Gestión y optimización de servicios en HuaweiCloud (OBS, FunctionGraph, DMS). Integración con sistemas de terceros y documentación técnica con OpenAPI.',
+    'skills.title':   'Habilidades <span>Técnicas</span>',
+    'skills.mobile':  'Desarrollo Mobile',
+    'skills.backend': 'Backend & Otros',
+    'edu.label':               'Formación',
+    'edu.title':               'Educación &amp; <span>Certificaciones</span>',
+    'edu.badge.distinction':   'Egresado con Distinción',
+    'edu.badge.certification': 'Certificación oficial',
+    'edu.badge.hours':         '+28 horas',
+    'edu.badge.teaching':      'Docencia Superior',
+    'contact.label':          '¿Hablamos?',
+    'contact.title':          'Ponte en <span>Contacto</span>',
+    'contact.intro':          'Estoy abierto a nuevas oportunidades, proyectos freelance o colaboraciones académicas. No dudes en escribirme.',
+    'contact.phone.label':    'Teléfono',
+    'contact.location.label': 'Ubicación',
+    'form.name.label':          'Nombre',
+    'form.name.placeholder':    'Tu nombre completo',
+    'form.email.label':         'Correo electrónico',
+    'form.message.label':       'Mensaje',
+    'form.message.placeholder': '¿En qué puedo ayudarte?',
+    'form.submit':         'Enviar mensaje',
+    'form.sending':        'Enviando…',
+    'form.error.fields':   'Por favor completa todos los campos.',
+    'form.error.email':    'Ingresa un correo electrónico válido.',
+    'form.success':        '¡Mensaje enviado! Te responderé a la brevedad.',
+    'form.error.send':     'Error al enviar. Intenta de nuevo.',
+    'form.error.offline':  'Sin conexión. Escríbeme directamente a bruno.otarola.g@gmail.com',
+    'footer.tagline':      'Diseñado y desarrollado con pasión · El Quisco, Chile',
+    'lang.switch.label':   'Switch language to English',
+    'typed.strings': [
+      'Desarrollador Mobile Senior',
+      'Flutter & React Native',
+      'Ingeniero en Informática',
+      'Docente IT & Mentor',
+      'Cloud & DevOps Enthusiast',
+    ],
+  },
+  en: {
+    'nav.about':        'About',
+    'nav.experience':   'Experience',
+    'nav.skills':       'Skills',
+    'nav.education':    'Education',
+    'nav.contact':      'Contact',
+    'nav.open':         'Open navigation menu',
+    'nav.close':        'Close navigation menu',
+    'hero.greeting':    "Hello, I'm",
+    'hero.description': 'Computer Science Engineer with <strong>5+ years</strong> of experience building high-performance mobile applications with Flutter and React Native, scalable cloud architectures, and training the next generation of developers.',
+    'hero.btn.contact':    'Contact me',
+    'hero.btn.experience': 'View experience',
+    'about.label': 'Who I am',
+    'about.title': 'Professional <span>Profile</span>',
+    'about.p1':    'I am a <strong>Computer Science Engineer</strong> graduated with distinction from Universidad Santo Tomás, currently working as <strong>Full Stack Developer at Correos Chile</strong>, leading the complete lifecycle of critical mobile applications.',
+    'about.p2':    'My specialty is mobile development with <strong>Flutter (Dart)</strong> and <strong>React Native (TypeScript)</strong>, backed by a solid foundation in cloud architectures on <strong>HuaweiCloud and AWS</strong>, CI/CD pipelines with Jenkins, and Docker containers.',
+    'about.p3':    'In parallel, I work as a <strong>Specialty Instructor</strong> at IP-CFT Santo Tomás, teaching IoT, Python, and Web Development — keeping me in continuous technical evolution and giving me unique communication skills.',
+    'stat.years':     'Years of experience',
+    'stat.apps':      'Published mobile apps',
+    'stat.companies': 'Companies impacted',
+    'stat.students':  'Students trained',
+    'exp.label':        'Career',
+    'exp.title':        'Work <span>Experience</span>',
+    'exp.correos.role': 'Full Stack & Mobile Developer',
+    'exp.correos.date': 'Feb 2023 – Present',
+    'exp.correos.desc': 'Responsible for the complete lifecycle of corporate mobile applications: analysis, development, testing, and deployment. Cloud infrastructure optimization, CI/CD pipeline implementation, and cross-functional team coordination for agile deliveries.',
+    'exp.sst.role': 'IT Specialty Instructor',
+    'exp.sst.date': '2024 – Present',
+    'exp.sst.desc': 'Teaching specialty courses: IoT with Arduino/Raspberry Pi, Python Programming, and Full Stack Web Development. Curriculum design, competency-based assessments, and personalized student mentorship.',
+    'exp.llego.date': 'May 2022 – Jan 2023',
+    'exp.llego.desc': 'Design and implementation of microservices and REST APIs in Python with Serverless architecture. Management and optimization of HuaweiCloud services (OBS, FunctionGraph, DMS). Third-party system integration and technical documentation with OpenAPI.',
+    'skills.title':   'Technical <span>Skills</span>',
+    'skills.mobile':  'Mobile Development',
+    'skills.backend': 'Backend & Other',
+    'edu.label':               'Training',
+    'edu.title':               'Education &amp; <span>Certifications</span>',
+    'edu.badge.distinction':   'Graduated with Distinction',
+    'edu.badge.certification': 'Official Certification',
+    'edu.badge.hours':         '+28 hours',
+    'edu.badge.teaching':      'Higher Education Teaching',
+    "contact.label":          "Let's talk?",
+    'contact.title':          'Get in <span>Touch</span>',
+    'contact.intro':          'I am open to new opportunities, freelance projects, or academic collaborations. Feel free to reach out.',
+    'contact.phone.label':    'Phone',
+    'contact.location.label': 'Location',
+    'form.name.label':          'Name',
+    'form.name.placeholder':    'Your full name',
+    'form.email.label':         'Email address',
+    'form.message.label':       'Message',
+    'form.message.placeholder': 'How can I help you?',
+    'form.submit':         'Send message',
+    'form.sending':        'Sending…',
+    'form.error.fields':   'Please fill in all fields.',
+    'form.error.email':    'Please enter a valid email address.',
+    'form.success':        'Message sent! I will get back to you shortly.',
+    'form.error.send':     'Failed to send. Please try again.',
+    'form.error.offline':  'No connection. Write to me directly at bruno.otarola.g@gmail.com',
+    'footer.tagline':      'Designed and developed with passion · El Quisco, Chile',
+    'lang.switch.label':   'Cambiar idioma a Español',
+    'typed.strings': [
+      'Senior Mobile Developer',
+      'Flutter & React Native',
+      'Computer Science Engineer',
+      'IT Instructor & Mentor',
+      'Cloud & DevOps Enthusiast',
+    ],
+  },
+};
+
+/** @type {'es'|'en'} */
+let currentLang = 'es';
+
+/** @type {{cancelled: boolean}|null} */
+let _typingToken = null;
+
 /**
  * Velocidad de escritura en milisegundos por carácter.
  * @type {number}
@@ -81,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillBars();
   initContactForm();
   updateActiveNavOnScroll();
+  initLanguageSwitcher();
 });
 
 /* ==========================================================================
@@ -145,7 +293,7 @@ function initNavigation() {
       hamburger.setAttribute('aria-expanded', String(isOpen));
       hamburger.setAttribute(
         'aria-label',
-        isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación',
+        isOpen ? t('nav.close') : t('nav.open'),
       );
     });
 
@@ -155,7 +303,7 @@ function initNavigation() {
         hamburger.classList.remove('open');
         navLinks.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Abrir menú de navegación');
+        hamburger.setAttribute('aria-label', t('nav.open'));
       });
     });
 
@@ -166,7 +314,7 @@ function initNavigation() {
         hamburger.classList.remove('open');
         navLinks.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Abrir menú de navegación');
+        hamburger.setAttribute('aria-label', t('nav.open'));
       }
     });
   }
@@ -252,6 +400,11 @@ function initScrollAnimations() {
  * @returns {void}
  */
 function initTypingEffect() {
+  // Cancel any currently running typing loop
+  if (_typingToken) _typingToken.cancelled = true;
+  _typingToken = { cancelled: false };
+  const token = _typingToken;
+
   const container = document.querySelector('.hero__title');
   if (!container) return;
 
@@ -274,6 +427,7 @@ function initTypingEffect() {
    * @returns {void}
    */
   function tick() {
+    if (token.cancelled) return;
     const current = TYPED_STRINGS[stringIndex];
 
     if (!isErasing) {
@@ -405,18 +559,19 @@ function initContactForm() {
 
     // Validación sencilla en cliente
     if (!name || !email || !message) {
-      showFormFeedback(form, 'Por favor completa todos los campos.', 'error');
+      showFormFeedback(form, t('form.error.fields'), 'error');
       return;
     }
 
     if (!isValidEmail(email)) {
-      showFormFeedback(form, 'Ingresa un correo electrónico válido.', 'error');
+      showFormFeedback(form, t('form.error.email'), 'error');
       return;
     }
 
     // ── Envío real vía Formspree (reenvía a tu Gmail) ──────────────────────
-    submitBtn.disabled    = true;
-    submitBtn.textContent = 'Enviando…';
+    const submitText = submitBtn.querySelector('[data-i18n="form.submit"]') || submitBtn;
+    submitBtn.disabled     = true;
+    submitText.textContent = t('form.sending');
 
     fetch(FORMSPREE_ENDPOINT, {
       method:  'POST',
@@ -425,22 +580,22 @@ function initContactForm() {
     })
       .then((response) => {
         if (response.ok) {
-          showFormFeedback(form, '¡Mensaje enviado! Te responderé a la brevedad.', 'success');
+          showFormFeedback(form, t('form.success'), 'success');
           form.reset();
         } else {
           return response.json().then((data) => {
             const msg = data?.errors?.map((e) => e.message).join(', ')
-              || 'Error al enviar. Intenta de nuevo.';
+              || t('form.error.send');
             showFormFeedback(form, msg, 'error');
           });
         }
       })
       .catch(() => {
-        showFormFeedback(form, 'Sin conexión. Escríbeme directamente a bruno.otarola.g@gmail.com', 'error');
+        showFormFeedback(form, t('form.error.offline'), 'error');
       })
       .finally(() => {
-        submitBtn.disabled    = false;
-        submitBtn.textContent = 'Enviar mensaje';
+        submitBtn.disabled     = false;
+        submitText.textContent = t('form.submit');
       });
   });
 }
@@ -488,4 +643,89 @@ function isValidEmail(email) {
   // Patrón RFC 5322 simplificado — suficiente para validación en cliente
   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return pattern.test(email);
+}
+
+/* ==========================================================================
+   MÓDULO: INTERNACIONALIZACIÓN
+   ========================================================================== */
+
+/**
+ * Devuelve el texto traducido para la clave indicada en el idioma activo.
+ *
+ * @param {string} key - Clave del diccionario TRANSLATIONS.
+ * @returns {string}
+ */
+function t(key) {
+  return (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key]) || key;
+}
+
+/**
+ * Aplica las traducciones del idioma indicado a todos los elementos
+ * del DOM marcados con data-i18n, data-i18n-html o data-i18n-placeholder.
+ *
+ * @param {'es'|'en'} lang - Código del idioma destino.
+ * @returns {void}
+ */
+function applyTranslations(lang) {
+  const dict = TRANSLATIONS[lang];
+  if (!dict) return;
+
+  // Texto plano
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const val = dict[el.dataset.i18n];
+    if (val !== undefined) el.textContent = val;
+  });
+
+  // HTML (elementos con etiquetas internas como <strong> o <span>)
+  document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+    const val = dict[el.dataset.i18nHtml];
+    if (val !== undefined) el.innerHTML = val;
+  });
+
+  // Atributos placeholder
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const val = dict[el.dataset.i18nPlaceholder];
+    if (val !== undefined) el.placeholder = val;
+  });
+
+  // Actualiza el array TYPED_STRINGS y reinicia el efecto de tipeo
+  if (Array.isArray(dict['typed.strings'])) {
+    TYPED_STRINGS.length = 0;
+    dict['typed.strings'].forEach((s) => TYPED_STRINGS.push(s));
+    initTypingEffect();
+  }
+
+  // Restaura el año dinámico en el footer tras posible innerHTML replacement
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
+/**
+ * Inicializa el botón de cambio de idioma (ES ↔ EN).
+ * Persiste la preferencia en localStorage.
+ *
+ * @returns {void}
+ */
+function initLanguageSwitcher() {
+  const btn = document.getElementById('lang-switch');
+  if (!btn) return;
+
+  // Restaurar preferencia guardada
+  const saved = localStorage.getItem('lang');
+  if (saved && saved !== currentLang) {
+    currentLang = saved;
+    applyTranslations(currentLang);
+    document.documentElement.lang = currentLang;
+    btn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+    btn.setAttribute('aria-label', t('lang.switch.label'));
+  }
+
+  btn.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    applyTranslations(currentLang);
+    document.documentElement.lang = currentLang;
+    btn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+    btn.setAttribute('aria-label', t('lang.switch.label'));
+    localStorage.setItem('lang', currentLang);
+  });
 }

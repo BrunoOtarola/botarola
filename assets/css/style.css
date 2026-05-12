@@ -211,6 +211,27 @@ a {
 .nav__hamburger.open span:nth-child(2) { opacity: 0; }
 .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+.nav__lang-switch {
+  background: transparent;
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text-muted);
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+  line-height: 1.6;
+}
+
+.nav__lang-switch:hover {
+  color: var(--clr-accent);
+  border-color: var(--clr-accent);
+  background: var(--clr-accent-dim);
+}
+
 /* --------------------------------------------------------------------------
    4. HERO
    -------------------------------------------------------------------------- */

@@ -51,11 +51,11 @@
     <a href="#hero" class="nav__logo" aria-label="Inicio — Bruno Otárola">BO</a>
 
     <ul class="nav__links" id="nav-menu">
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#skills">Habilidades</a></li>
-      <li><a href="#education">Educación</a></li>
-      <li><a href="#contact">Contacto</a></li>
+      <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+      <li><a href="#education" data-i18n="nav.education">Educación</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
     </ul>
 
     <button
@@ -69,6 +69,11 @@
       <span></span>
       <span></span>
     </button>
+    <button
+      class="nav__lang-switch"
+      id="lang-switch"
+      aria-label="Switch language to English"
+    >EN</button>
   </nav>
 
   <!-- ======================================================
@@ -85,7 +90,7 @@
     <div class="hero__container">
       <!-- Columna de texto -->
       <div class="hero__content">
-        <p class="hero__greeting reveal">Hola, soy</p>
+        <p class="hero__greeting reveal" data-i18n="hero.greeting">Hola, soy</p>
 
         <h1 class="hero__name reveal">
           Bruno<br /><span>Otárola</span>
@@ -94,7 +99,7 @@
         <!-- El texto se rellena dinámicamente por JS -->
         <p class="hero__title reveal" aria-live="polite"></p>
 
-        <p class="hero__description reveal">
+        <p class="hero__description reveal" data-i18n-html="hero.description">
           Ingeniero en Informática con <strong>+5 años</strong> de experiencia
           construyendo aplicaciones móviles de alto rendimiento con Flutter y
           React Native, arquitecturas cloud escalables y formando a la próxima
@@ -121,11 +126,11 @@
         <div class="hero__actions reveal">
           <a href="#contact" class="btn btn--primary">
             <i class="fas fa-paper-plane" aria-hidden="true"></i>
-            Contáctame
+            <span data-i18n="hero.btn.contact">Contáctame</span>
           </a>
           <a href="#experience" class="btn btn--ghost">
             <i class="fas fa-briefcase" aria-hidden="true"></i>
-            Ver experiencia
+            <span data-i18n="hero.btn.experience">Ver experiencia</span>
           </a>
         </div>
       </div>
@@ -149,25 +154,25 @@
        SOBRE MÍ
        ====================================================== -->
   <section id="about" class="section" aria-labelledby="about-title">
-    <p class="section__label reveal">Quién soy</p>
-    <h2 class="section__title reveal" id="about-title">Perfil <span>Profesional</span></h2>
+    <p class="section__label reveal" data-i18n="about.label">Quién soy</p>
+    <h2 class="section__title reveal" id="about-title" data-i18n-html="about.title">Perfil <span>Profesional</span></h2>
 
     <div class="about__grid">
       <!-- Texto descriptivo -->
       <div class="about__text reveal reveal--left">
-        <p>
+        <p data-i18n-html="about.p1">
           Soy <strong>Ingeniero en Informática</strong> egresado con distinción
           de la Universidad Santo Tomás y actualmente me desempeño como
           <strong>Desarrollador Full Stack en Correos Chile</strong>, liderando
           el ciclo de vida de aplicaciones móviles críticas.
         </p>
-        <p>
+        <p data-i18n-html="about.p2">
           Mi especialidad es el desarrollo mobile con <strong>Flutter (Dart)</strong>
           y <strong>React Native (TypeScript)</strong>, respaldado por una sólida
           base en arquitecturas cloud sobre <strong>HuaweiCloud y AWS</strong>,
           integración de pipelines CI/CD con Jenkins y contenedores Docker.
         </p>
-        <p>
+        <p data-i18n-html="about.p3">
           Paralelamente ejerzo como <strong>Docente de Especialidad</strong> en
           IP-CFT Santo Tomás, impartiendo IoT, Python y Programación Web, lo que
           me mantiene en permanente actualización y me da habilidades únicas de
@@ -179,19 +184,19 @@
       <div class="about__stats reveal-group">
         <div class="stat-card reveal">
           <p class="stat-card__number">5+</p>
-          <p class="stat-card__label">Años de experiencia</p>
+          <p class="stat-card__label" data-i18n="stat.years">Años de experiencia</p>
         </div>
         <div class="stat-card reveal">
           <p class="stat-card__number">10+</p>
-          <p class="stat-card__label">Apps mobile publicadas</p>
+          <p class="stat-card__label" data-i18n="stat.apps">Apps mobile publicadas</p>
         </div>
         <div class="stat-card reveal">
           <p class="stat-card__number">3</p>
-          <p class="stat-card__label">Empresas impactadas</p>
+          <p class="stat-card__label" data-i18n="stat.companies">Empresas impactadas</p>
         </div>
         <div class="stat-card reveal">
           <p class="stat-card__number">100+</p>
-          <p class="stat-card__label">Estudiantes formados</p>
+          <p class="stat-card__label" data-i18n="stat.students">Estudiantes formados</p>
         </div>
       </div>
     </div>
@@ -202,8 +207,8 @@
        ====================================================== -->
   <div class="section--full">
     <section id="experience" class="section__inner" aria-labelledby="exp-title">
-      <p class="section__label reveal">Trayectoria</p>
-      <h2 class="section__title reveal" id="exp-title">Experiencia <span>Laboral</span></h2>
+      <p class="section__label reveal" data-i18n="exp.label">Trayectoria</p>
+      <h2 class="section__title reveal" id="exp-title" data-i18n-html="exp.title">Experiencia <span>Laboral</span></h2>
 
       <div class="timeline">
 
@@ -213,11 +218,11 @@
             <div class="timeline__header">
               <div>
                 <p class="timeline__company">Correos Chile</p>
-                <p class="timeline__role">Desarrollador Full Stack & Mobile</p>
+                <p class="timeline__role" data-i18n="exp.correos.role">Desarrollador Full Stack & Mobile</p>
               </div>
-              <span class="timeline__date">Feb 2023 – Actualidad</span>
+              <span class="timeline__date" data-i18n="exp.correos.date">Feb 2023 – Actualidad</span>
             </div>
-            <p class="timeline__desc">
+            <p class="timeline__desc" data-i18n="exp.correos.desc">
               Responsable del ciclo de vida completo de aplicaciones móviles
               corporativas: análisis, desarrollo, testing y despliegue. Optimización
               de infraestructura cloud, implementación de pipelines CI/CD y
@@ -241,11 +246,11 @@
             <div class="timeline__header">
               <div>
                 <p class="timeline__company">IP-CFT Santo Tomás</p>
-                <p class="timeline__role">Docente de Especialidad TI</p>
+                <p class="timeline__role" data-i18n="exp.sst.role">Docente de Especialidad TI</p>
               </div>
-              <span class="timeline__date">2024 – Actualidad</span>
+              <span class="timeline__date" data-i18n="exp.sst.date">2024 – Actualidad</span>
             </div>
-            <p class="timeline__desc">
+            <p class="timeline__desc" data-i18n="exp.sst.desc">
               Docente de cursos de especialidad: IoT con Arduino/Raspberry Pi,
               Programación en Python y Desarrollo Web Full Stack. Diseño de
               material didáctico, evaluaciones por competencias y mentoría
@@ -270,9 +275,9 @@
                 <p class="timeline__company">LLEGÓ</p>
                 <p class="timeline__role">API Developer</p>
               </div>
-              <span class="timeline__date">Mayo 2022 – Ene 2023</span>
+              <span class="timeline__date" data-i18n="exp.llego.date">Mayo 2022 – Ene 2023</span>
             </div>
-            <p class="timeline__desc">
+            <p class="timeline__desc" data-i18n="exp.llego.desc">
               Diseño e implementación de microservicios y APIs REST en Python con
               arquitectura Serverless. Gestión y optimización de servicios en
               HuaweiCloud (OBS, FunctionGraph, DMS). Integración con sistemas
@@ -297,7 +302,7 @@
        ====================================================== -->
   <section id="skills" class="section" aria-labelledby="skills-title">
     <p class="section__label reveal">Stack</p>
-    <h2 class="section__title reveal" id="skills-title">Habilidades <span>Técnicas</span></h2>
+    <h2 class="section__title reveal" id="skills-title" data-i18n-html="skills.title">Habilidades <span>Técnicas</span></h2>
 
     <div class="skills__grid reveal-group">
 
@@ -305,7 +310,7 @@
       <div class="skill-group reveal">
         <p class="skill-group__title">
           <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-          Desarrollo Mobile
+          <span data-i18n="skills.mobile">Desarrollo Mobile</span>
         </p>
         <div class="skill-bar">
           <div class="skill-bar__info">
@@ -375,7 +380,7 @@
       <div class="skill-group reveal">
         <p class="skill-group__title">
           <i class="fas fa-server" aria-hidden="true"></i>
-          Backend & Otros
+          <span data-i18n="skills.backend">Backend & Otros</span>
         </p>
         <div class="skill-bar">
           <div class="skill-bar__info">
@@ -428,8 +433,8 @@
        ====================================================== -->
   <div class="section--full">
     <section id="education" class="section__inner" aria-labelledby="edu-title">
-      <p class="section__label reveal">Formación</p>
-      <h2 class="section__title reveal" id="edu-title">Educación &amp; <span>Certificaciones</span></h2>
+      <p class="section__label reveal" data-i18n="edu.label">Formación</p>
+      <h2 class="section__title reveal" id="edu-title" data-i18n-html="edu.title">Educación &amp; <span>Certificaciones</span></h2>
 
       <div class="education__grid reveal-group">
 
@@ -438,7 +443,7 @@
           <p class="edu-card__degree">Ingeniería en Informática</p>
           <p class="edu-card__institution">Universidad Santo Tomás</p>
           <p class="edu-card__period">2016 – 2021</p>
-          <span class="edu-card__badge">Egresado con Distinción</span>
+          <span class="edu-card__badge" data-i18n="edu.badge.distinction">Egresado con Distinción</span>
           <span class="edu-card__badge" style="margin-left:.25rem;">Alumno Sello 2020</span>
         </div>
 
@@ -447,15 +452,19 @@
           <p class="edu-card__degree">HCIA — Cloud Computing</p>
           <p class="edu-card__institution">Huawei ICT Academy</p>
           <p class="edu-card__period">2022</p>
-          <span class="edu-card__badge">Certificación oficial</span>
+          <span class="edu-card__badge" data-i18n="edu.badge.certification">Certificación oficial</span>
         </div>
 
         <div class="edu-card reveal">
-          <div class="edu-card__icon"><i class="fab fa-flutter" aria-hidden="true"></i></div>
+          <div class="edu-card__icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.314 0L2.3 12 6 15.7 21.684 0h-7.37zm.064 11.48l-4.444 4.444 4.444 4.443 4.443-4.443-4.443-4.444zM6.077 19.619L9.6 23.142l4.778-4.779-3.524-3.523-4.777 4.779z"/>
+            </svg>
+          </div>
           <p class="edu-card__degree">Flutter & Dart — The Complete Guide</p>
           <p class="edu-card__institution">Udemy (Maximilian Schwarzmüller)</p>
           <p class="edu-card__period">2021</p>
-          <span class="edu-card__badge">+28 horas</span>
+          <span class="edu-card__badge" data-i18n="edu.badge.hours">+28 horas</span>
         </div>
 
         <div class="edu-card reveal">
@@ -463,7 +472,7 @@
           <p class="edu-card__degree">Formación Pedagógica</p>
           <p class="edu-card__institution">IP-CFT Santo Tomás</p>
           <p class="edu-card__period">2023 – 2024</p>
-          <span class="edu-card__badge">Docencia Superior</span>
+          <span class="edu-card__badge" data-i18n="edu.badge.teaching">Docencia Superior</span>
         </div>
 
       </div>
@@ -474,13 +483,13 @@
        CONTACTO
        ====================================================== -->
   <section id="contact" class="section" aria-labelledby="contact-title">
-    <p class="section__label reveal">¿Hablamos?</p>
-    <h2 class="section__title reveal" id="contact-title">Ponte en <span>Contacto</span></h2>
+    <p class="section__label reveal" data-i18n="contact.label">¿Hablamos?</p>
+    <h2 class="section__title reveal" id="contact-title" data-i18n-html="contact.title">Ponte en <span>Contacto</span></h2>
 
     <div class="contact__wrapper">
       <!-- Información de contacto -->
       <div class="contact__info reveal reveal--left">
-        <p>
+        <p data-i18n="contact.intro">
           Estoy abierto a nuevas oportunidades, proyectos freelance o
           colaboraciones académicas. No dudes en escribirme.
         </p>
@@ -497,7 +506,7 @@
           <a href="tel:+56991852029" class="contact__link" aria-label="Llamar a Bruno">
             <i class="fas fa-phone" aria-hidden="true"></i>
             <div>
-              <span class="contact__link-label">Teléfono</span>
+              <span class="contact__link-label" data-i18n="contact.phone.label">Teléfono</span>
               <span class="contact__link-value">+56 9 9185 2029</span>
             </div>
           </a>
@@ -513,7 +522,7 @@
           <span class="contact__link">
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
             <div>
-              <span class="contact__link-label">Ubicación</span>
+              <span class="contact__link-label" data-i18n="contact.location.label">Ubicación</span>
               <span class="contact__link-value">El Quisco, Región de Valparaíso, Chile</span>
             </div>
           </span>
@@ -524,18 +533,19 @@
       <!-- Formulario -->
       <form id="contact-form" class="contact__form reveal reveal--right" novalidate aria-label="Formulario de contacto">
         <div class="form-group">
-          <label for="name">Nombre</label>
+          <label for="name" data-i18n="form.name.label">Nombre</label>
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Tu nombre completo"
+            data-i18n-placeholder="form.name.placeholder"
             required
             autocomplete="name"
           />
         </div>
         <div class="form-group">
-          <label for="email">Correo electrónico</label>
+          <label for="email" data-i18n="form.email.label">Correo electrónico</label>
           <input
             type="email"
             id="email"
@@ -546,18 +556,19 @@
           />
         </div>
         <div class="form-group">
-          <label for="message">Mensaje</label>
+          <label for="message" data-i18n="form.message.label">Mensaje</label>
           <textarea
             id="message"
             name="message"
             rows="5"
             placeholder="¿En qué puedo ayudarte?"
+            data-i18n-placeholder="form.message.placeholder"
             required
           ></textarea>
         </div>
         <button type="submit" class="btn btn--primary">
           <i class="fas fa-paper-plane" aria-hidden="true"></i>
-          Enviar mensaje
+          <span data-i18n="form.submit">Enviar mensaje</span>
         </button>
       </form>
     </div>
@@ -569,7 +580,7 @@
   <footer class="footer">
     <p class="footer__text">
       &copy; <span id="year"></span> <span>Bruno Otárola</span> —
-      Diseñado y desarrollado con pasión · El Quisco, Chile
+      <span data-i18n="footer.tagline">Diseñado y desarrollado con pasión · El Quisco, Chile</span>
     </p>
   </footer>
 
