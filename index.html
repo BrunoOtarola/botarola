@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CV y portafolio profesional de Bruno David Otárola González — Ingeniero en Informática, Desarrollador Mobile Senior Flutter & React Native y Docente IT." />
+  <meta name="author" content="Bruno David Otárola González" />
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:title"       content="Bruno Otárola | Desarrollador Mobile Senior" />
+  <meta property="og:description" content="Portafolio profesional de Bruno Otárola — Flutter, React Native, Cloud & Docente IT." />
+  <meta property="og:type"        content="website" />
+
+  <title>Bruno Otárola | Desarrollador Mobile Senior</title>
+
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome 6 (CDN oficial sin kit personal) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ======================================================
+       BARRA DE PROGRESO DE LECTURA
+       ====================================================== -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ======================================================
+       NAVEGACIÓN PRINCIPAL
+       ====================================================== -->
+  <nav class="nav" role="navigation" aria-label="Navegación principal">
+    <a href="#hero" class="nav__logo" aria-label="Inicio — Bruno Otárola">BO</a>
+
+    <ul class="nav__links" id="nav-menu">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#experience">Experiencia</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#education">Educación</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+
+    <button
+      class="nav__hamburger"
+      id="hamburger"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+      aria-label="Abrir menú de navegación"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ======================================================
+       HERO / PRESENTACIÓN
+       ====================================================== -->
+  <section id="hero" class="hero" aria-label="Presentación">
+    <!-- Formas decorativas de fondo -->
+    <div class="hero__bg-shapes" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="hero__container">
+      <!-- Columna de texto -->
+      <div class="hero__content">
+        <p class="hero__greeting reveal">Hola, soy</p>
+
+        <h1 class="hero__name reveal">
+          Bruno<br /><span>Otárola</span>
+        </h1>
+
+        <!-- El texto se rellena dinámicamente por JS -->
+        <p class="hero__title reveal" aria-live="polite"></p>
+
+        <p class="hero__description reveal">
+          Ingeniero en Informática con <strong>+5 años</strong> de experiencia
+          construyendo aplicaciones móviles de alto rendimiento con Flutter y
+          React Native, arquitecturas cloud escalables y formando a la próxima
+          generación de desarrolladores.
+        </p>
+
+        <!-- Datos de contacto rápido -->
+        <div class="hero__contacts reveal">
+          <a href="mailto:bruno.otarola.g@gmail.com" class="hero__contact-item" aria-label="Correo electrónico">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            bruno.otarola.g@gmail.com
+          </a>
+          <a href="tel:+56991852029" class="hero__contact-item" aria-label="Teléfono">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            +56 9 9185 2029
+          </a>
+          <span class="hero__contact-item">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            El Quisco, Chile
+          </span>
+        </div>
+
+        <!-- Llamados a la acción -->
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--primary">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            Contáctame
+          </a>
+          <a href="#experience" class="btn btn--ghost">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+            Ver experiencia
+          </a>
+        </div>
+      </div>
+
+      <!-- Foto de perfil -->
+      <div class="hero__photo-wrap reveal reveal--right">
+        <div class="hero__photo-ring" aria-hidden="true"></div>
+        <img
+          src="assets/img/ImagenProfesional.png"
+          alt="Fotografía profesional de Bruno Otárola"
+          class="hero__photo"
+          loading="eager"
+          width="240"
+          height="240"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SOBRE MÍ
+       ====================================================== -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <p class="section__label reveal">Quién soy</p>
+    <h2 class="section__title reveal" id="about-title">Perfil <span>Profesional</span></h2>
+
+    <div class="about__grid">
+      <!-- Texto descriptivo -->
+      <div class="about__text reveal reveal--left">
+        <p>
+          Soy <strong>Ingeniero en Informática</strong> egresado con distinción
+          de la Universidad Santo Tomás y actualmente me desempeño como
+          <strong>Desarrollador Full Stack en Correos Chile</strong>, liderando
+          el ciclo de vida de aplicaciones móviles críticas.
+        </p>
+        <p>
+          Mi especialidad es el desarrollo mobile con <strong>Flutter (Dart)</strong>
+          y <strong>React Native (TypeScript)</strong>, respaldado por una sólida
+          base en arquitecturas cloud sobre <strong>HuaweiCloud y AWS</strong>,
+          integración de pipelines CI/CD con Jenkins y contenedores Docker.
+        </p>
+        <p>
+          Paralelamente ejerzo como <strong>Docente de Especialidad</strong> en
+          IP-CFT Santo Tomás, impartiendo IoT, Python y Programación Web, lo que
+          me mantiene en permanente actualización y me da habilidades únicas de
+          comunicación técnica.
+        </p>
+      </div>
+
+      <!-- Métricas destacadas -->
+      <div class="about__stats reveal-group">
+        <div class="stat-card reveal">
+          <p class="stat-card__number">5+</p>
+          <p class="stat-card__label">Años de experiencia</p>
+        </div>
+        <div class="stat-card reveal">
+          <p class="stat-card__number">10+</p>
+          <p class="stat-card__label">Apps mobile publicadas</p>
+        </div>
+        <div class="stat-card reveal">
+          <p class="stat-card__number">3</p>
+          <p class="stat-card__label">Empresas impactadas</p>
+        </div>
+        <div class="stat-card reveal">
+          <p class="stat-card__number">100+</p>
+          <p class="stat-card__label">Estudiantes formados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EXPERIENCIA LABORAL — TIMELINE
+       ====================================================== -->
+  <div class="section--full">
+    <section id="experience" class="section__inner" aria-labelledby="exp-title">
+      <p class="section__label reveal">Trayectoria</p>
+      <h2 class="section__title reveal" id="exp-title">Experiencia <span>Laboral</span></h2>
+
+      <div class="timeline">
+
+        <!-- Correos Chile -->
+        <article class="timeline__item reveal">
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <p class="timeline__company">Correos Chile</p>
+                <p class="timeline__role">Desarrollador Full Stack & Mobile</p>
+              </div>
+              <span class="timeline__date">Feb 2023 – Actualidad</span>
+            </div>
+            <p class="timeline__desc">
+              Responsable del ciclo de vida completo de aplicaciones móviles
+              corporativas: análisis, desarrollo, testing y despliegue. Optimización
+              de infraestructura cloud, implementación de pipelines CI/CD y
+              coordinación de equipos multidisciplinarios para entregas ágiles.
+            </p>
+            <div class="timeline__tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">React Native</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag tag--violet">CI/CD</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Santo Tomás -->
+        <article class="timeline__item reveal">
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <p class="timeline__company">IP-CFT Santo Tomás</p>
+                <p class="timeline__role">Docente de Especialidad TI</p>
+              </div>
+              <span class="timeline__date">2024 – Actualidad</span>
+            </div>
+            <p class="timeline__desc">
+              Docente de cursos de especialidad: IoT con Arduino/Raspberry Pi,
+              Programación en Python y Desarrollo Web Full Stack. Diseño de
+              material didáctico, evaluaciones por competencias y mentoría
+              personalizada a estudiantes.
+            </p>
+            <div class="timeline__tags">
+              <span class="tag">Python</span>
+              <span class="tag">IoT</span>
+              <span class="tag">Arduino</span>
+              <span class="tag">HTML/CSS/JS</span>
+              <span class="tag tag--violet">Docencia</span>
+              <span class="tag tag--violet">Mentoría</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Llegó -->
+        <article class="timeline__item reveal">
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <p class="timeline__company">LLEGÓ</p>
+                <p class="timeline__role">API Developer</p>
+              </div>
+              <span class="timeline__date">Mayo 2022 – Ene 2023</span>
+            </div>
+            <p class="timeline__desc">
+              Diseño e implementación de microservicios y APIs REST en Python con
+              arquitectura Serverless. Gestión y optimización de servicios en
+              HuaweiCloud (OBS, FunctionGraph, DMS). Integración con sistemas
+              de terceros y documentación técnica con OpenAPI.
+            </p>
+            <div class="timeline__tags">
+              <span class="tag">Python</span>
+              <span class="tag">Serverless</span>
+              <span class="tag">HuaweiCloud</span>
+              <span class="tag">REST API</span>
+              <span class="tag tag--violet">OpenAPI</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================================================
+       HABILIDADES TÉCNICAS
+       ====================================================== -->
+  <section id="skills" class="section" aria-labelledby="skills-title">
+    <p class="section__label reveal">Stack</p>
+    <h2 class="section__title reveal" id="skills-title">Habilidades <span>Técnicas</span></h2>
+
+    <div class="skills__grid reveal-group">
+
+      <!-- Mobile -->
+      <div class="skill-group reveal">
+        <p class="skill-group__title">
+          <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+          Desarrollo Mobile
+        </p>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">Flutter / Dart</span>
+            <span class="skill-bar__percent">90%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">React Native / TypeScript</span>
+            <span class="skill-bar__percent">82%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="82" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">JavaScript / TypeScript</span>
+            <span class="skill-bar__percent">85%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloud & DevOps -->
+      <div class="skill-group reveal">
+        <p class="skill-group__title">
+          <i class="fas fa-cloud" aria-hidden="true"></i>
+          Cloud & DevOps
+        </p>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">HuaweiCloud</span>
+            <span class="skill-bar__percent">80%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">Docker</span>
+            <span class="skill-bar__percent">75%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">Jenkins / CI-CD</span>
+            <span class="skill-bar__percent">72%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="72" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend & otros -->
+      <div class="skill-group reveal">
+        <p class="skill-group__title">
+          <i class="fas fa-server" aria-hidden="true"></i>
+          Backend & Otros
+        </p>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">Python</span>
+            <span class="skill-bar__percent">80%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">Serverless / Microservicios</span>
+            <span class="skill-bar__percent">76%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="76" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__info">
+            <span class="skill-bar__name">IoT (Arduino / RPi)</span>
+            <span class="skill-bar__percent">70%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" data-level="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tecnologías adicionales como etiquetas -->
+    <div class="tech-tags reveal" style="margin-top: 2rem;">
+      <span class="tag">Git / GitHub</span>
+      <span class="tag">REST API</span>
+      <span class="tag">Firebase</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Scrum / Agile</span>
+      <span class="tag">OpenAPI</span>
+      <span class="tag tag--violet">HTML5 / CSS3</span>
+      <span class="tag tag--violet">Node.js</span>
+      <span class="tag tag--violet">Linux</span>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EDUCACIÓN
+       ====================================================== -->
+  <div class="section--full">
+    <section id="education" class="section__inner" aria-labelledby="edu-title">
+      <p class="section__label reveal">Formación</p>
+      <h2 class="section__title reveal" id="edu-title">Educación &amp; <span>Certificaciones</span></h2>
+
+      <div class="education__grid reveal-group">
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+          <p class="edu-card__degree">Ingeniería en Informática</p>
+          <p class="edu-card__institution">Universidad Santo Tomás</p>
+          <p class="edu-card__period">2016 – 2021</p>
+          <span class="edu-card__badge">Egresado con Distinción</span>
+          <span class="edu-card__badge" style="margin-left:.25rem;">Alumno Sello 2020</span>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+          <p class="edu-card__degree">HCIA — Cloud Computing</p>
+          <p class="edu-card__institution">Huawei ICT Academy</p>
+          <p class="edu-card__period">2022</p>
+          <span class="edu-card__badge">Certificación oficial</span>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon"><i class="fab fa-flutter" aria-hidden="true"></i></div>
+          <p class="edu-card__degree">Flutter & Dart — The Complete Guide</p>
+          <p class="edu-card__institution">Udemy (Maximilian Schwarzmüller)</p>
+          <p class="edu-card__period">2021</p>
+          <span class="edu-card__badge">+28 horas</span>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></div>
+          <p class="edu-card__degree">Formación Pedagógica</p>
+          <p class="edu-card__institution">IP-CFT Santo Tomás</p>
+          <p class="edu-card__period">2023 – 2024</p>
+          <span class="edu-card__badge">Docencia Superior</span>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================================================
+       CONTACTO
+       ====================================================== -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <p class="section__label reveal">¿Hablamos?</p>
+    <h2 class="section__title reveal" id="contact-title">Ponte en <span>Contacto</span></h2>
+
+    <div class="contact__wrapper">
+      <!-- Información de contacto -->
+      <div class="contact__info reveal reveal--left">
+        <p>
+          Estoy abierto a nuevas oportunidades, proyectos freelance o
+          colaboraciones académicas. No dudes en escribirme.
+        </p>
+        <div class="contact__links">
+
+          <a href="mailto:bruno.otarola.g@gmail.com" class="contact__link" aria-label="Enviar correo a Bruno">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <div>
+              <span class="contact__link-label">Email</span>
+              <span class="contact__link-value">bruno.otarola.g@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="tel:+56991852029" class="contact__link" aria-label="Llamar a Bruno">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <div>
+              <span class="contact__link-label">Teléfono</span>
+              <span class="contact__link-value">+56 9 9185 2029</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/brunoOtarola" target="_blank" rel="noopener noreferrer" class="contact__link" aria-label="Perfil de LinkedIn de Bruno">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            <div>
+              <span class="contact__link-label">LinkedIn</span>
+              <span class="contact__link-value">linkedin.com/in/brunoOtarola</span>
+            </div>
+          </a>
+
+          <span class="contact__link">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <span class="contact__link-label">Ubicación</span>
+              <span class="contact__link-value">El Quisco, Región de Valparaíso, Chile</span>
+            </div>
+          </span>
+
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <form id="contact-form" class="contact__form reveal reveal--right" novalidate aria-label="Formulario de contacto">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Tu nombre completo"
+            required
+            autocomplete="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tu@correo.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="¿En qué puedo ayudarte?"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PIE DE PÁGINA
+       ====================================================== -->
+  <footer class="footer">
+    <p class="footer__text">
+      &copy; <span id="year"></span> <span>Bruno Otárola</span> —
+      Diseñado y desarrollado con pasión · El Quisco, Chile
+    </p>
+  </footer>
+
+  <!-- Script principal (defer para no bloquear el renderizado) -->
+  <script src="assets/js/script.js" defer></script>
+
+  <!-- Año dinámico en el footer -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
