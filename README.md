@@ -169,7 +169,7 @@ Design and implementation of microservices and REST APIs in Python with Serverle
 |------------|-------------------------------------------------------------------------|
 | Email      | [bruno.otarola.g@gmail.com](mailto:bruno.otarola.g@gmail.com)           |
 | Phone      | [+56 9 9185 2029](tel:+56991852029)                                     |
-| LinkedIn   | [linkedin.com/in/brunoOtarola](https://www.linkedin.com/in/brunoOtarola)|
+| LinkedIn   | [linkedin.com/in/bruno-otarola](https://www.linkedin.com/in/bruno-otarola)|
 | Location   | El Quisco, Región de Valparaíso, Chile                                  |
 
 ---
