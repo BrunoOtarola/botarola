@@ -1039,6 +1039,8 @@ a {
 /* --------------------------------------------------------------------------
    14. RESPONSIVE — Mobile First overrides
    -------------------------------------------------------------------------- */
+
+/* ── 1024 px — tabletas en horizontal ─────────────────────────────────── */
 @media (max-width: 1024px) {
   .hero__container {
     grid-template-columns: 1fr;
@@ -1073,47 +1075,94 @@ a {
   }
 }
 
+/* ── 768 px — tabletas en vertical y móviles grandes ───────────────────── */
 @media (max-width: 768px) {
   :root {
-    --space-xl:  1.5rem;
-    --space-2xl: 2.5rem;
+    --space-xl:  1.25rem;
+    --space-2xl: 2rem;
   }
 
+  /* ── Navegación ── */
+
+  /* Ocultamos el menú inline: desaparece del flujo y del viewport */
   .nav__links {
     position: fixed;
     top: 64px;
     left: 0;
     right: 0;
-    background: rgba(10, 15, 30, 0.97);
-    backdrop-filter: blur(18px);
+    /* Estrategia visibility+opacity+transform: más fiable que solo translateY */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
+    /* Dirección y layout del panel desplegable */
     flex-direction: column;
+    align-items: stretch;
     gap: 0;
-    padding: var(--space-md) 0;
-    transform: translateY(-110%);
-    transition: transform var(--transition-med);
+    padding: 0.5rem 0 1rem;
+    background: rgba(10, 15, 30, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--clr-border);
     z-index: 800;
+    transition: opacity var(--transition-med),
+                transform var(--transition-med),
+                visibility var(--transition-med);
   }
 
+  /* Estado abierto */
   .nav__links.open {
+    visibility: visible;
+    opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
   }
 
-  .nav__links a {
-    padding: var(--space-md) var(--space-xl);
+  /* Los <li> ocupan todo el ancho */
+  .nav__links li {
     width: 100%;
-    font-size: 1rem;
   }
 
+  /* Los enlaces ocupan todo el <li> y tienen área de toque generosa */
+  .nav__links a {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    border-left: 3px solid transparent;
+    transition: color var(--transition-fast),
+                background var(--transition-fast),
+                border-color var(--transition-fast);
+  }
+
+  .nav__links a:hover,
+  .nav__links a.active {
+    background: var(--clr-accent-dim);
+    border-left-color: var(--clr-accent);
+    color: var(--clr-accent);
+  }
+
+  /* Elimina el subrayado animado que ya no aplica en mobile */
+  .nav__links a::after {
+    display: none;
+  }
+
+  /* Botón hamburguesa visible en mobile */
   .nav__hamburger {
     display: flex;
   }
 
+  /* ── Hero ── */
   .hero__photo {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
 
+  .hero__photo-ring {
+    inset: -10px;
+  }
+
+  /* ── Timeline ── */
   .timeline {
     padding-left: 1.25rem;
   }
@@ -1124,21 +1173,72 @@ a {
 
   .timeline__header {
     flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* ── Skills ── */
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Educación ── */
+  .education__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Sección con fondo alterno ── */
+  .section--full .section__inner {
+    padding: var(--space-2xl) var(--space-xl);
   }
 }
 
+/* ── 480 px — móviles pequeños ─────────────────────────────────────────── */
 @media (max-width: 480px) {
+  :root {
+    --space-xl:  1rem;
+    --space-2xl: 1.75rem;
+  }
+
+  /* Métricas en 2 columnas iguales */
   .about__stats {
     grid-template-columns: 1fr 1fr;
   }
 
+  /* Botones CTA en columna */
   .hero__actions {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  /* Formulario: campos a ancho completo */
+  .contact__form {
+    width: 100%;
+  }
+
+  /* Timeline sin icono de nodo (espacio muy reducido) */
+  .timeline {
+    padding-left: 0.75rem;
+  }
+
+  .timeline__item::before {
+    width: 8px;
+    height: 8px;
+    left: -1.15rem;
+  }
+
+  /* Tags más pequeños */
+  .tag {
+    font-size: 0.7rem;
+  }
+
+  /* Foto más pequeña */
+  .hero__photo {
+    width: 130px;
+    height: 130px;
   }
 }

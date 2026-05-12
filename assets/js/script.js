@@ -16,6 +16,18 @@
    ========================================================================== */
 
 /**
+ * Endpoint de Formspree para el formulario de contacto.
+ * Pasos para activarlo:
+ *   1. Ir a https://formspree.io y crear una cuenta gratuita con tu Gmail.
+ *   2. Crear un nuevo formulario → copiar el ID (ej. "xyzabcde").
+ *   3. Reemplazar "TU_ID_AQUI" por ese ID.
+ * El tier gratuito permite 50 envíos/mes y reenvía directo a tu Gmail.
+ *
+ * @type {string}
+ */
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqennpve';
+
+/**
  * Textos que se ciclan en el efecto de tipeo del hero.
  * @type {string[]}
  */
@@ -129,8 +141,12 @@ function initNavigation() {
       const isOpen = hamburger.classList.toggle('open');
       navLinks.classList.toggle('open', isOpen);
 
-      // Accesibilidad: aria-expanded
+      // Accesibilidad: aria-expanded y aria-label dinámicos
       hamburger.setAttribute('aria-expanded', String(isOpen));
+      hamburger.setAttribute(
+        'aria-label',
+        isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación',
+      );
     });
 
     // Cierra el menú al hacer clic en cualquier enlace interno
@@ -139,7 +155,19 @@ function initNavigation() {
         hamburger.classList.remove('open');
         navLinks.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Abrir menú de navegación');
       });
+    });
+
+    // Cierra el menú al hacer clic fuera de él
+    document.addEventListener('click', (event) => {
+      const nav = document.querySelector('.nav');
+      if (nav && !nav.contains(event.target) && navLinks.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Abrir menú de navegación');
+      }
     });
   }
 }
@@ -386,16 +414,34 @@ function initContactForm() {
       return;
     }
 
-    // Simulación de envío — reemplazar con fetch() a un endpoint real
+    // ── Envío real vía Formspree (reenvía a tu Gmail) ──────────────────────
     submitBtn.disabled    = true;
     submitBtn.textContent = 'Enviando…';
 
-    setTimeout(() => {
-      showFormFeedback(form, '¡Mensaje enviado! Me pondré en contacto pronto.', 'success');
-      form.reset();
-      submitBtn.disabled    = false;
-      submitBtn.textContent = 'Enviar mensaje';
-    }, 1500);
+    fetch(FORMSPREE_ENDPOINT, {
+      method:  'POST',
+      headers: { 'Accept': 'application/json' },
+      body:    new FormData(form),
+    })
+      .then((response) => {
+        if (response.ok) {
+          showFormFeedback(form, '¡Mensaje enviado! Te responderé a la brevedad.', 'success');
+          form.reset();
+        } else {
+          return response.json().then((data) => {
+            const msg = data?.errors?.map((e) => e.message).join(', ')
+              || 'Error al enviar. Intenta de nuevo.';
+            showFormFeedback(form, msg, 'error');
+          });
+        }
+      })
+      .catch(() => {
+        showFormFeedback(form, 'Sin conexión. Escríbeme directamente a bruno.otarola.g@gmail.com', 'error');
+      })
+      .finally(() => {
+        submitBtn.disabled    = false;
+        submitBtn.textContent = 'Enviar mensaje';
+      });
   });
 }
 
